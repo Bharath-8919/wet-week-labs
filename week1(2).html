@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Elements Demo</title>
+</head>
+
+<body>
+
+    <h1>HTML Elements Demonstration</h1>
+    <hr>
+
+    <!-- 1. LINK -->
+    <h2>1. Hyperlink</h2>
+    <p>
+        Visit 
+        <a href="https://www.google.com" target="_blank">
+            Google
+        </a>
+    </p>
+
+    <!-- 2. IMAGE -->
+    <h2>2. Image</h2>
+    <img src="https://via.placeholder.com/300x150"
+         alt="Sample Image"
+         width="300"
+         height="150">
+
+    <!-- 3. LISTS -->
+    <h2>3. Lists</h2>
+
+    <h3>Ordered List</h3>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+    </ul>
+
+    <!-- 4. TABLE -->
+    <h2>4. Table</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
+
+        <tr>
+            <td>101</td>
+            <td>Rahul</td>
+            <td>B.Tech</td>
+        </tr>
+
+        <tr>
+            <td>102</td>
+            <td>Priya</td>
+            <td>B.Tech</td>
+        </tr>
+
+        <tr>
+            <td>103</td>
+            <td>Arun</td>
+            <td>B.Tech</td>
+        </tr>
+    </table>
+
+    <!-- 5. FORM -->
+    <h2>5. Registration Form</h2>
+
+    <form>
+        <label>Name:</label>
+        <input type="text" name="name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password">
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <br><br>
+
+        <label>Skills:</label>
+        <input type="checkbox"> HTML
+        <input type="checkbox"> CSS
+        <input type="checkbox"> JavaScript
+        <br><br>
+
+        <label>Course:</label>
+        <select>
+            <option>B.Tech</option>
+            <option>M.Tech</option>
+            <option>MCA</option>
+        </select>
+        <br><br>
+
+        <label>Address:</label>
+        <br>
+        <textarea rows="4" cols="40"></textarea>
+        <br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <!-- 6. IFRAME -->
+    <h2>6. Iframe</h2>
+
+    <iframe
+        src="https://www.wikipedia.org"
+        width="600"
+        height="300"
+        title="Wikipedia">
+    </iframe>
+
+    <!-- 7. AUDIO -->
+    <h2>7. Audio</h2>
+
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <p>
+        Place an audio file named <b>audio.mp3</b>
+        in the same folder as this HTML file.
+    </p>
+
+    <!-- 8. VIDEO -->
+    <h2>8. Video</h2>
+
+    <video width="500" height="300" controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <p>
+        Place a video file named <b>video.mp4</b>
+        in the same folder as this HTML file.
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #message {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Registration Form</h1>
+
+        <form id="myForm">
+
+            <label>Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label>Age:</label>
+            <input type="number" id="age" placeholder="Enter your age">
+
+            <label>Course:</label>
+            <select id="course">
+                <option value="">Select Course</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="M.Tech">M.Tech</option>
+                <option value="MCA">MCA</option>
+            </select>
+
+            <label>Message:</label>
+            <textarea id="userMessage"
+                      rows="4"
+                      placeholder="Enter your message"></textarea>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+        <div id="message"></div>
+
+    </div>
+
+
+    <script>
+
+        // Get the form
+        const form = document.getElementById("myForm");
+
+        // Add submit event
+        form.addEventListener("submit", function(event) {
+
+            // Prevent page reload
+            event.preventDefault();
+
+            // Get input values
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let age = document.getElementById("age").value;
+            let course = document.getElementById("course").value;
+            let userMessage = document.getElementById("userMessage").value;
+
+            // Validate form
+            if (name === "" || email === "" || age === "" ||
+                course === "" || userMessage === "") {
+
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Display result
+            let messageBox = document.getElementById("message");
+
+            messageBox.style.display = "block";
+
+            messageBox.innerHTML =
+                "<strong>Registration Successful!</strong><br><br>" +
+                "Name: " + name + "<br>" +
+                "Email: " + email + "<br>" +
+                "Age: " + age + "<br>" +
+                "Course: " + course + "<br>" +
+                "Message: " + userMessage;
+
+            // Clear form
+            form.reset();
+
+        });
+
+    </script>
+
+</body>
+</html>
